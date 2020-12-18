@@ -26,3 +26,7 @@ same images, minimal settings, no bullets, no captions, no navigation
 
 {% include slider.html selector="slider3" %}
 
+## slider 4
+
+{% include carousel.html height="50" unit="%" duration="7" %}
+
