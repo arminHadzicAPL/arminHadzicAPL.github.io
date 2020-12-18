@@ -1,6 +1,10 @@
 ---
 title: Home
-layout: default
+layout: page
+image_sliders:
+  - slider1
+  - slider2
+  - slider3
 ---
 {% include slider_styles.html %}
 
