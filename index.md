@@ -34,3 +34,5 @@ same images, minimal settings, no bullets, no captions, no navigation
 
 {% include carousel.html height="50" unit="%" duration="7" %}
 
+## slider 5
+{% include nyt_slider.html height="50" unit="%" duration="7" %}
