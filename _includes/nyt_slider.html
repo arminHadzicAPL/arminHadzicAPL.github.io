@@ -112,7 +112,8 @@
 			let rangeHandle  = document.querySelector ("#range_" + slider.value.id),
 				sliderSprite = document.querySelector ("#" + slider.value.id + " .g-slider-sprite");
 
-			sliderSprite.style.backgroundImage = "url('https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/" + slider.value.background + "')";
+			console.log(slider.value.background)
+			sliderSprite.style.backgroundImage = "url('" + slider.value.background + "')"; //"url('https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/" + slider.value.background + "')";
 
 
 			rangeHandle.oninput = function ()
