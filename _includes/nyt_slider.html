@@ -18,27 +18,26 @@
 
 	return [offsetX, offsetY];
 	};
-  function testOnChange(){
-  	var yml = {
-		pages: {
-			index: {
-				headline: "Designed to Deceive: Do These People Look Real to You?",
-				Alt: "",
-				byline: "By <a href=\"https://www.nytimes.com/by/kashmir-hill\">Kashmir Hill</a> and <a href=\"https://www.nytimes.com/by/jeremy-white\">Jeremy White</a>",
-				leadin: "",
-				summary: "The people in this story may look familiar, like ones youâ€™ve seen on Facebook or Twitter or Tinder. But they donâ€™t exist. They were born from the mind of a computer, and the technology behind them is improving at a startling pace.",
-				pubdate: "Nov. 21, 2020",
-				tweet: "",
-				sources: "",
-				credit: "Note: A pre-trained version of Nvidia's StyleGAN2 package, implemented in TensorFlow, was used to generate the images for this story. The networks trained on the Flickr-Faces-HQ dataset, which included over 70,000 photographs of people. Improvements to the original StyleGAN architecture by <a href=\"https://arxiv.org/abs/1912.04958\">Karras et. al</a>.",
-				last_updated_text: "",
-				scoop_username: "jeremy.white",
-				scoop_slug: "artificial-intelligence-fake-people-faces",
-				scoop_asset_id: "100000007463709",
-				scoop_external_edit_key: "STYBIGAS3VQiJ5rGqfA0ID1jA6WeVIhiASaGOEoknb9trufl2qaIHlH+sa0LY7Hj"
+	var yml = {
+			pages: {
+				index: {
+					headline: "Designed to Deceive: Do These People Look Real to You?",
+					Alt: "",
+					byline: "By <a href=\"https://www.nytimes.com/by/kashmir-hill\">Kashmir Hill</a> and <a href=\"https://www.nytimes.com/by/jeremy-white\">Jeremy White</a>",
+					leadin: "",
+					summary: "The people in this story may look familiar, like ones youâ€™ve seen on Facebook or Twitter or Tinder. But they donâ€™t exist. They were born from the mind of a computer, and the technology behind them is improving at a startling pace.",
+					pubdate: "Nov. 21, 2020",
+					tweet: "",
+					sources: "",
+					credit: "Note: A pre-trained version of Nvidia's StyleGAN2 package, implemented in TensorFlow, was used to generate the images for this story. The networks trained on the Flickr-Faces-HQ dataset, which included over 70,000 photographs of people. Improvements to the original StyleGAN architecture by <a href=\"https://arxiv.org/abs/1912.04958\">Karras et. al</a>.",
+					last_updated_text: "",
+					scoop_username: "jeremy.white",
+					scoop_slug: "artificial-intelligence-fake-people-faces",
+					scoop_asset_id: "100000007463709",
+					scoop_external_edit_key: "STYBIGAS3VQiJ5rGqfA0ID1jA6WeVIhiASaGOEoknb9trufl2qaIHlH+sa0LY7Hj"
+				}
 			}
-		}
-	};
+		};
 	var body = [
 		{
 			type: "start",
@@ -142,7 +141,6 @@
 
 	    return slider;
 	  });
-	}
 </script>
 
 <div class="g-story g-max-limit " data-preview-slug="2020-11-12-fake-people">
@@ -152,7 +150,7 @@
 			<div class="g-slider-desc">
 				<div class="g-slider-title">Age</div>
 			</div>
-			<input type="range" min="1" max="49" value="17" class="g-slider" id="range_tom_age" onchange="testOnChange()">
+			<input type="range" min="1" max="49" value="17" class="g-slider" id="range_tom_age">
 		</div>
 		<div class="g-slider-container" id="alice_eyes">
 			<div class="g-slider-sprite" style="background-image: url(&quot;https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/sprites/alice-eyes-v2.jpg&quot;); background-position: -8700px -1200px;"></div>
