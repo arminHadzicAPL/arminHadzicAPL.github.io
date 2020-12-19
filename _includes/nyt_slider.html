@@ -14,6 +14,7 @@
   }
 </script>
 <script id="nytg-dynamic-script_template-options">
+  
   function getSpritePos(value, depth){
 	let val     = value - 1,
 		square  = Math.sqrt (depth),
@@ -25,26 +26,37 @@
 	return [offsetX, offsetY];
 	};
   function testOnChange(event){
-	console.log("am I working")
-	let rangeHandle  = document.querySelector ("#range_tom_age"); //"#range_" + slider.value.id),
-	let sliderSprite = document.querySelector ("#range_tom_age.g-slider-sprite");//"#" + slider.value.id + " .g-slider-sprite");
+  	let filtered  = DOC.body.filter (function (item) { return item.type === "slider" }),
+	    sliders   = filtered.map (function (slider)
+	    {
+	      let rangeHandle  = document.querySelector ("#range_" + slider.value.id),
+	          sliderSprite = document.querySelector ("#" + slider.value.id + " .g-slider-sprite");
 
-	sliderSprite.style.backgroundImage = "url('https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/" + "sprities/tom-age.jpg" + "')";//slider.value.background + "')";
+	      sliderSprite.style.backgroundImage = "url('https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/" + slider.value.background + "')";
 
-	/*rangeHandle.oninput = function (){
-		let offset = getSpritePos (event.value, slider.value.depth);
 
-		//sliderSprite.style.backgroundPosition = offsetX + "px " + offsetY +"px";
-		sliderSprite.style.backgroundPosition = offset[0] + "px " + offset[1] +"px";
-		};
-	*/
+	      rangeHandle.oninput = function ()
+	      {
+	        let offset = getSpritePos (this.value, slider.value.depth);
+	        // let val     = this.value - 1,
+	        //     depth   = slider.value.depth,
+	        //     square  = Math.sqrt (depth),
+	        //     floor   = Math.floor (val / square),
+	        //     extra   = val - floor,
+	        //     offsetX = (floor + extra) * -300,
+	        //     offsetY = floor * -300;
 
-		rangeHandle.value = parseInt (slider.value.index);
-		let offset = getSpritePos (slider.value.index, slider.value.depth);
-		sliderSprite.style.backgroundPosition = offset[0] + "px " + offset[1] +"px";
+	        //sliderSprite.style.backgroundPosition = offsetX + "px " + offsetY +"px";
+	        sliderSprite.style.backgroundPosition = offset[0] + "px " + offset[1] +"px";
+	      };
 
-		return slider;
-		}
+	      rangeHandle.value = parseInt (slider.value.index);
+	      let offset = getSpritePos (slider.value.index, slider.value.depth);
+	      sliderSprite.style.backgroundPosition = offset[0] + "px " + offset[1] +"px";
+
+	    return slider;
+	  });
+	}
 </script>
 
 <div class="g-story g-max-limit " data-preview-slug="2020-11-12-fake-people">
