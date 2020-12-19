@@ -38,6 +38,7 @@
 				}
 			}
 		};
+  function testOnChange(){
 	var body = [
 		{
 			type: "start",
@@ -141,6 +142,7 @@
 
 	    return slider;
 	  });
+	}
 </script>
 
 <div class="g-story g-max-limit " data-preview-slug="2020-11-12-fake-people">
@@ -150,7 +152,7 @@
 			<div class="g-slider-desc">
 				<div class="g-slider-title">Age</div>
 			</div>
-			<input type="range" min="1" max="49" value="17" class="g-slider" id="range_tom_age">
+			<input type="range" min="1" max="49" value="17" class="g-slider" id="range_tom_age" onchange="testOnChange()">
 		</div>
 		<div class="g-slider-container" id="alice_eyes">
 			<div class="g-slider-sprite" style="background-image: url(&quot;https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/sprites/alice-eyes-v2.jpg&quot;); background-position: -8700px -1200px;"></div>
