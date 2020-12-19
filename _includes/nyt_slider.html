@@ -7,12 +7,6 @@
 <link id="nytg-rendered-css" href="https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/style.css" rel="stylesheet">
 <link href="https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/build/css/components.css" rel="stylesheet">
 
-<!-- sprites, polyfills, imports -->
-<script>
-  if (!window.Promise || !window.fetch || !window.URL) {
-    document.write('<script src="https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/polyfills.js"><\/script>');
-  }
-</script>
 <script id="nytg-dynamic-script_template-options">
   function getSpritePos(value, depth){
 	let val     = value - 1,
@@ -24,14 +18,38 @@
 
 	return [offsetX, offsetY];
 	};
-  function testOnChange(event){
+  function testOnChange(){
   	var yml = {
 		pages: {
 			index: {
+				headline: "Designed to Deceive: Do These People Look Real to You?",
+				Alt: "",
+				byline: "By <a href=\"https://www.nytimes.com/by/kashmir-hill\">Kashmir Hill</a> and <a href=\"https://www.nytimes.com/by/jeremy-white\">Jeremy White</a>",
+				leadin: "",
+				summary: "The people in this story may look familiar, like ones youâ€™ve seen on Facebook or Twitter or Tinder. But they donâ€™t exist. They were born from the mind of a computer, and the technology behind them is improving at a startling pace.",
+				pubdate: "Nov. 21, 2020",
+				tweet: "",
+				sources: "",
+				credit: "Note: A pre-trained version of Nvidia's StyleGAN2 package, implemented in TensorFlow, was used to generate the images for this story. The networks trained on the Flickr-Faces-HQ dataset, which included over 70,000 photographs of people. Improvements to the original StyleGAN architecture by <a href=\"https://arxiv.org/abs/1912.04958\">Karras et. al</a>.",
+				last_updated_text: "",
+				scoop_username: "jeremy.white",
+				scoop_slug: "artificial-intelligence-fake-people-faces",
+				scoop_asset_id: "100000007463709",
+				scoop_external_edit_key: "STYBIGAS3VQiJ5rGqfA0ID1jA6WeVIhiASaGOEoknb9trufl2qaIHlH+sa0LY7Hj"
 			}
 		}
 	};
 	var body = [
+		{
+			type: "start",
+			value: "g-background-to-white",
+			css: ""
+		},
+		{
+			type: "end",
+			value: "g-background-to-white",
+			css: ""
+		},
 		{
 			type: "start",
 			value: "g-sliders-container",
@@ -94,42 +112,6 @@
 			value: "g-sliders-container",
 			css: ""
 		},
-		{
-			type: "start",
-			value: "g-sliders-container",
-			css: ""
-		},
-		{
-			type: "slider",
-			value: {
-				id: "drew_gender",
-				title: "Gender",
-				low: "",
-				high: "",
-				background: "sprites/drew-gender.jpg",
-				depth: "49",
-				index: "14"
-			},
-			css: ""
-		},
-		{
-			type: "slider",
-			value: {
-				id: "ed_race",
-				title: "Race&nbsp;and&nbsp;Ethnicity",
-				low: "",
-				high: "",
-				background: "sprites/ed-race-2.jpg",
-				depth: "49",
-				index: "44"
-			},
-			css: ""
-		},
-		{
-			type: "end",
-			value: "g-sliders-container",
-			css: ""
-		}
 	];
   	var DOC = {
 		yml: yml,
@@ -150,7 +132,7 @@
 
 	      rangeHandle.oninput = function ()
 	      {
-	        let offset = getSpritePos (event.value, slider.value.depth);
+	        let offset = getSpritePos (this.value, slider.value.depth);
 	        sliderSprite.style.backgroundPosition = offset[0] + "px " + offset[1] +"px";
 	      };
 
@@ -168,11 +150,30 @@
 		<div class="g-slider-container" id="tom_age">
 			<div class="g-slider-sprite" style="background-image: url(&quot;https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/sprites/tom-age.jpg&quot;); background-position: -8100px -900px;"></div>
 			<div class="g-slider-desc">
-		<!-- 		<div class="g-slider-low"></div> -->
 				<div class="g-slider-title">Age</div>
-		<!-- 		<div class="g-slider-high"></div> -->
 			</div>
 			<input type="range" min="1" max="49" value="17" class="g-slider" id="range_tom_age" onchange="testOnChange()">
+		</div>
+		<div class="g-slider-container" id="alice_eyes">
+			<div class="g-slider-sprite" style="background-image: url(&quot;https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/sprites/alice-eyes-v2.jpg&quot;); background-position: -8700px -1200px;"></div>
+			<div class="g-slider-desc">
+				<div class="g-slider-title">Eyes</div>
+			</div>
+			<input type="range" min="1" max="49" value="30" class="g-slider" id="range_alice_eyes">
+		</div>
+		<div class="g-slider-container" id="shawn_yaw">
+			<div class="g-slider-sprite" style="background-image: url(&quot;https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/sprites/shawn-yaw-v2.jpg&quot;); background-position: -11400px -1500px;"></div>
+			<div class="g-slider-desc">
+				<div class="g-slider-title">Perspective</div>
+			</div>
+			<input type="range" min="1" max="49" value="39" class="g-slider" id="range_shawn_yaw">
+		</div>
+		<div class="g-slider-container" id="maggie_smile">
+			<div class="g-slider-sprite" style="background-image: url(&quot;https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/sprites/maggie-smile.jpg&quot;); background-position: -4500px -600px;"></div>
+			<div class="g-slider-desc">
+				<div class="g-slider-title">Mood</div>
+			</div>
+			<input type="range" min="1" max="49" value="16" class="g-slider" id="range_maggie_smile">
 		</div>
 	</div>
 </div>
