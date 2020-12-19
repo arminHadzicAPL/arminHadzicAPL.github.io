@@ -25,6 +25,415 @@
 	return [offsetX, offsetY];
 	};
   function testOnChange(event){
+  	var yml = {
+		pages: {
+			index: {
+				headline: "Designed to Deceive: Do These People Look Real to You?",
+				Alt: "",
+				byline: "By <a href=\"https://www.nytimes.com/by/kashmir-hill\">Kashmir Hill</a> and <a href=\"https://www.nytimes.com/by/jeremy-white\">Jeremy White</a>",
+				leadin: "",
+				summary: "The people in this story may look familiar, like ones youâ€™ve seen on Facebook or Twitter or Tinder. But they donâ€™t exist. They were born from the mind of a computer, and the technology behind them is improving at a startling pace.",
+				pubdate: "Nov. 21, 2020",
+				tweet: "",
+				sources: "",
+				credit: "Note: A pre-trained version of Nvidia's StyleGAN2 package, implemented in TensorFlow, was used to generate the images for this story. The networks trained on the Flickr-Faces-HQ dataset, which included over 70,000 photographs of people. Improvements to the original StyleGAN architecture by <a href=\"https://arxiv.org/abs/1912.04958\">Karras et. al</a>.",
+				last_updated_text: "",
+				scoop_username: "jeremy.white",
+				scoop_slug: "artificial-intelligence-fake-people-faces",
+				scoop_asset_id: "100000007463709",
+				scoop_external_edit_key: "STYBIGAS3VQiJ5rGqfA0ID1jA6WeVIhiASaGOEoknb9trufl2qaIHlH+sa0LY7Hj"
+			}
+		}
+	};
+	var body = [
+		{
+			type: "scrollingvideo",
+			value: {
+				id: "scrolling_video_top",
+				framerate: "30",
+				framelength: "600",
+				startscroll: "0.1",
+				endscroll: "0.9",
+				heightdesktop: "0.5",
+				heightmobile: "0.4",
+				desktop: "1024,1024",
+				mobile: "800,800",
+				"asset-max-width": "fullbleed",
+				hed: "",
+				sources: "",
+				credit: "",
+				asset: "",
+				https: "//int.nyt.com/newsgraphics/2020/these-people-are-not-real/top/top-v4-1024.mp4",
+				rendition_asset: "https://int.nyt.com/newsgraphics/2020/these-people-are-not-real/top/top-v4",
+				single_frames: "https://int.nyt.com/newsgraphics/2020/these-people-are-not-real/top/stills/top-v4",
+				slides: [
+					{
+						text: "These people may look familiar, like ones youâ€™ve seen on Facebook or Twitter.",
+						percent: "0.065",
+						fallbackdesktop: "fallbacks/desktop-01.jpg",
+						fallbackmobile: "fallbacks/mobile-01.jpg"
+					},
+					{
+						text: "Or people whose product reviews youâ€™ve read on Amazon, or dating profiles youâ€™ve seen on Tinder.",
+						percent: "0.21",
+						fallbackdesktop: "fallbacks/desktop-02.jpg",
+						fallbackmobile: "fallbacks/mobile-02.jpg"
+					},
+					{
+						text: "They look stunningly real at first glance.",
+						percent: "0.40",
+						fallbackdesktop: "fallbacks/desktop-03.jpg",
+						fallbackmobile: "fallbacks/mobile-03.jpg"
+					},
+					{
+						text: "But they do not exist.",
+						percent: "0.50",
+						fallbackdesktop: "fallbacks/desktop-04.jpg",
+						fallbackmobile: "fallbacks/mobile-04.jpg"
+					},
+					{
+						text: "They were born from the mind of a computer.",
+						percent: "0.62",
+						fallbackdesktop: "fallbacks/desktop-05.jpg",
+						fallbackmobile: "fallbacks/mobile-05.jpg"
+					},
+					{
+						text: "And the technology that makes them is improving at a startling pace.",
+						percent: "0.72",
+						fallbackdesktop: "fallbacks/desktop-06.jpg",
+						fallbackmobile: "fallbacks/mobile-06.jpg"
+					},
+					{
+						text: "",
+						template: "custom/header",
+						percent: "0.95",
+						fallbackdesktop: "fallbacksdesktop-07.jpg",
+						fallbackmobile: "fallbacks/mobile-07.jpg"
+					}
+				]
+			},
+			css: ""
+		},
+		{
+			type: "start",
+			value: "g-background-to-white",
+			css: ""
+		},
+		{
+			type: "end",
+			value: "g-background-to-white",
+			css: ""
+		},
+		{
+			type: "text",
+			value: "There are now businesses that sell fake people. On the website Generated.Photos, you can buy a â€œunique, worry-freeâ€ fake person for $2.99, or 1,000 people for $1,000. If you just need a couple of fake people â€” for characters in a video game, or to make your company website <a href=\"https://twitter.com/chanceinh3ll/status/1271816775466795010\">appear more diverse</a> â€” you can get their photos for free on ThisPersonDoesNotExist.com. Adjust their likeness as needed; make them old or young or the ethnicity of your choosing. If you want your fake person animated, a company called Rosebud.AI can do that and can even make them talk.",
+			css: ""
+		},
+		{
+			type: "text",
+			value: "These simulated people are starting to show up around the internet, used as masks by real people with nefarious intent: spies who don <a href=\"https://apnews.com/article/bc2f19097a4c4fffaa00de6770b8a60d\">an attractive face</a> in an effort to infiltrate the intelligence community; <a href=\"https://www.thedailybeast.com/right-wing-media-outlets-duped-by-a-middle-east-propaganda-campaign\">right-wing propagandists</a> who hide behind fake profiles, photo and all; online <a href=\"https://kslnewsradio.com/1919785/how-ai-faces-are-being-weaponized-online/\">harassers</a> who troll their targets with a friendly visage.",
+			css: ""
+		},
+		{
+			type: "subhed",
+			value: "We created our own A.I. system to understand how easy it is to generate different fake faces.",
+			css: ""
+		},
+		{
+			type: "text",
+			value: "The A.I. system sees each face as a complex mathematical figure, a range of values that can be shifted. Choosing different values â€” like those that determine the size and shape of eyes â€” can alter the whole image.",
+			css: ""
+		},
+		{
+			type: "start",
+			value: "g-sliders-container",
+			css: ""
+		},
+		{
+			type: "slider",
+			value: {
+				id: "tom_age",
+				title: "Age",
+				low: "",
+				high: "",
+				background: "sprites/tom-age.jpg",
+				depth: "49",
+				index: "17"
+			},
+			css: ""
+		},
+		{
+			type: "slider",
+			value: {
+				id: "alice_eyes",
+				title: "Eyes",
+				low: "",
+				high: "",
+				background: "sprites/alice-eyes-v2.jpg",
+				depth: "49",
+				index: "30"
+			},
+			css: ""
+		},
+		{
+			type: "slider",
+			value: {
+				id: "shawn_yaw",
+				title: "Perspective",
+				low: "",
+				high: "",
+				background: "sprites/shawn-yaw-v2.jpg",
+				depth: "49",
+				index: "39"
+			},
+			css: ""
+		},
+		{
+			type: "slider",
+			value: {
+				id: "maggie_smile",
+				title: "Mood",
+				low: "",
+				high: "",
+				background: "sprites/maggie-smile.jpg",
+				depth: "49",
+				index: "16"
+			},
+			css: ""
+		},
+		{
+			type: "end",
+			value: "g-sliders-container",
+			css: ""
+		},
+		{
+			type: "text",
+			value: "For other qualities, our system used a different approach. Instead of shifting values that determine specific parts of the image, the system first generated two images to establish starting and end points for all of the values, and then created images in between.",
+			css: ""
+		},
+		{
+			type: "start",
+			value: "g-sliders-container",
+			css: ""
+		},
+		{
+			type: "slider",
+			value: {
+				id: "drew_gender",
+				title: "Gender",
+				low: "",
+				high: "",
+				background: "sprites/drew-gender.jpg",
+				depth: "49",
+				index: "14"
+			},
+			css: ""
+		},
+		{
+			type: "slider",
+			value: {
+				id: "ed_race",
+				title: "Race&nbsp;and&nbsp;Ethnicity",
+				low: "",
+				high: "",
+				background: "sprites/ed-race-2.jpg",
+				depth: "49",
+				index: "44"
+			},
+			css: ""
+		},
+		{
+			type: "end",
+			value: "g-sliders-container",
+			css: ""
+		},
+		{
+			type: "text",
+			value: "The creation of these types of fake images only became possible in recent years thanks to a new type of artificial intelligence called a generative adversarial network. In essence, you feed a computer program a bunch of photos of real people. It studies them and tries to come up with its own photos of people, while another part of the system tries to detect which of those photos are fake.",
+			css: ""
+		},
+		{
+			type: "text",
+			value: "The back-and-forth makes the end product ever more indistinguishable from the real thing. The portraits in this story were created by The Times using GAN software that was made publicly available by the computer graphics company Nvidia.",
+			css: ""
+		},
+		{
+			type: "text",
+			value: "Given the pace of improvement, itâ€™s easy to imagine a not-so-distant future in which we are confronted with not just single portraits of fake people but whole collections of them â€” at a party with fake friends, hanging out with their fake dogs, holding their fake babies. It will become increasingly difficult to tell who is real online and who is a figment of a computerâ€™s imagination.",
+			css: ""
+		},
+		{
+			type: "text",
+			value: "â€œWhen the tech first appeared in 2014, it was bad â€” it looked like <a href=\"https://www.nytimes.com/2009/05/14/business/media/14adco.html\">the Sims</a>,â€ said Camille FranÃ§ois, a disinformation researcher whose job is to analyze manipulation of social networks. â€œItâ€™s a reminder of how quickly the technology can evolve. Detection will only get harder over time.â€",
+			css: ""
+		},
+		{
+			type: "text",
+			value: "Advances in facial fakery have been made possible in part because technology has become so much better at identifying key facial features. You can use your face to unlock your smartphone, or tell your photo software to sort through your thousands of pictures and show you only those of your child. Facial recognition programs are used by law enforcement to identify and arrest criminal suspects (and also by <a href=\"https://www.nytimes.com/2020/10/21/technology/facial-recognition-police.html\">some activists</a> to reveal the identities of police officers who cover their name tags in an attempt to remain anonymous). A company called <a href=\"https://www.nytimes.com/2020/01/18/technology/clearview-privacy-facial-recognition.html\">Clearview AI</a> scraped the web of billions of public photos â€” casually shared online by everyday users â€” to create an app capable of recognizing a stranger from just one photo. The technology promises superpowers: the ability to organize and process the world in a way that wasnâ€™t possible before.",
+			css: ""
+		},
+		{
+			type: "ad",
+			value: "",
+			css: ""
+		},
+		{
+			type: "text",
+			value: "But facial-recognition algorithms, like other A.I. systems, are not perfect. Thanks to underlying bias in the data used to train them, some of these systems are not as good, for instance, at recognizing people of color. In 2015, an early image-detection system developed by Google <a href=\"https://bits.blogs.nytimes.com/2015/07/01/google-photos-mistakenly-labels-black-people-gorillas/\">labeled</a> two Black people as â€œgorillas,â€ most likely because the system had been fed many more photos of gorillas than of people with dark skin.",
+			css: ""
+		},
+		{
+			type: "text",
+			value: "Moreover, cameras â€” the eyes of facial-recognition systems â€” are <a href=\"https://www.mic.com/articles/184244/keeping-insecure-lit-hbo-cinematographer-ava-berkofsky-on-properly-lighting-black-faces\">not as good</a> at capturing people with dark skin; that unfortunate standard dates to the early days of film development, when photos <a href=\"https://www.npr.org/2014/11/13/363517842/for-decades-kodak-s-shirley-cards-set-photography-s-skin-tone-standard\">were calibrated</a> to best show the <a href=\"https://www.nytimes.com/2019/04/25/lens/sarah-lewis-racial-bias-photography.html\">faces of light-skinned people</a>. The consequences can be severe. In January, a Black man in Detroit named Robert Williams was arrested for <a href=\"https://www.nytimes.com/2020/06/24/technology/facial-recognition-arrest.html\">a crime he did not commit</a> because of an incorrect facial-recognition match.",
+			css: ""
+		},
+		{
+			type: "text",
+			value: "Artificial intelligence can make our lives easier, but ultimately it is as flawed as we are, because we are behind all of it. Humans choose how A.I. systems are made and what data they are exposed to. We choose the voices that teach virtual assistants to hear, leading these systems <a href=\"https://www.washingtonpost.com/graphics/2018/business/alexa-does-not-understand-your-accent/\">not to understand people</a> with accents. We design a computer program to predict a personâ€™s criminal behavior by feeding it data about past rulings made by human judges â€” and in the process <a href=\"https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing\">baking in those judgesâ€™ biases</a>. We label the images that train computers to see; they then associate <a href=\"https://www.nytimes.com/2019/09/20/arts/design/imagenet-trevor-paglen-ai-facial-recognition.html\">glasses with â€œdweebsâ€ or â€œnerds.</a>â€",
+			css: ""
+		},
+		{
+			type: "subhed",
+			value: "You can spot some of the mistakes and patterns we found that our A.I. system repeated when it was conjuring fake faces.",
+			css: ""
+		},
+		{
+			type: "scrollingvideo",
+			value: {
+				id: "scrolling_video_defects",
+				framerate: "30",
+				framelength: "600",
+				startscroll: "0",
+				endscroll: "0.9",
+				heightdesktop: "0.6",
+				heightmobile: "0.5",
+				desktop: "1024,1024",
+				mobile: "800,800",
+				"asset-max-width": "fullbleed",
+				hed: "",
+				sources: "",
+				credit: "",
+				asset: "",
+				rendition_asset: "",
+				single_frames: "",
+				slides: [
+					{
+						text: "Fashion accessories can cause problems.",
+						percent: "0.03",
+						fallbackdesktop: "spotting/earrings.jpg",
+						fallbackmobile: "spotting/earrings-mobile.jpg"
+					},
+					{
+						text: "Earrings, for example, might look similar but often may not exactly match.",
+						percent: "0.10",
+						fallbackdesktop: "spotting/earrings-overlay.jpg",
+						fallbackmobile: "spotting/earrings-overlay-mobile.jpg"
+					},
+					{
+						text: "GANs typically train on real photographs that have been centered, scaled and cropped.",
+						percent: "0.17",
+						fallbackdesktop: "spotting/center.jpg",
+						fallbackmobile: "spotting/center-mobile.jpg"
+					},
+					{
+						text: "As a result, each eye may be the same distance from the center.",
+						percent: "0.25",
+						fallbackdesktop: "spotting/center-overlay.jpg",
+						fallbackmobile: "spotting/center-overlay-mobile.jpg"
+					},
+					{
+						text: "Glasses are common accessories in many of the fake pictures.",
+						percent: "0.333",
+						fallbackdesktop: "spotting/glasses.jpg",
+						fallbackmobile: "spotting/glasses-mobile.jpg"
+					},
+					{
+						text: "They tend to have thin frames, with end pieces that may not match.",
+						percent: "0.416",
+						fallbackdesktop: "spotting/glasses-overlay.jpg",
+						fallbackmobile: "spotting/glasses-overlay-mobile.jpg"
+					},
+					{
+						text: "Most of us donâ€™t have perfectly symmetrical features, and the system is good at recreating them.",
+						percent: "0.499",
+						fallbackdesktop: "spotting/ears.jpg",
+						fallbackmobile: "spotting/ears-mobile.jpg"
+					},
+					{
+						text: "But as a result, it can produce deep indentations in one ear that may not be present in the other.",
+						percent: "0.583",
+						fallbackdesktop: "spotting/ears-overlay.jpg",
+						fallbackmobile: "spotting/ears-overlay-mobile.jpg"
+					},
+					{
+						text: "Then there are odder artifacts that can appear out of nowhere.",
+						percent: "0.666",
+						fallbackdesktop: "spotting/artifacts.jpg",
+						fallbackmobile: "spotting/artifacts-mobile.jpg"
+					},
+					{
+						text: "Most often theyâ€™re only in one part of the image, but if you look closely enough, itâ€™s hard to unsee it.",
+						percent: "0.749",
+						fallbackdesktop: "spotting/artifacts-overlay.jpg",
+						fallbackmobile: "spotting/artifacts-overlay-mobile.jpg"
+					},
+					{
+						text: "Sometimes, the clues about whether an image is fake arenâ€™t in a personâ€™s features.",
+						percent: "0.83",
+						fallbackdesktop: "spotting/backgrounds.jpg",
+						fallbackmobile: "spotting/backgrounds-mobile.jpg"
+					},
+					{
+						text: "Abstract or blurry backgrounds are often giveaways.",
+						percent: "0.91",
+						fallbackdesktop: "spotting/backgrounds-overlay.jpg",
+						fallbackmobile: "spotting/backgrounds-overlay-mobile.jpg"
+					}
+				]
+			},
+			css: ""
+		},
+		{
+			type: "text",
+			value: "Humans err, of course: We overlook or glaze past the flaws in these systems, all too quick to trust that computers are hyper-rational, objective, always right. Studies have shown that, in situations where humans and computers must cooperate to make a decision â€” to identify <a href=\"https://eprints.soton.ac.uk/374599/1/AFIS%2520Bias.pdf\">fingerprints</a> or <a href=\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7444527/\">human faces</a> â€” people <a href=\"https://onlinelibrary.wiley.com/doi/full/10.1111/cogs.12633\">consistently</a> made the wrong identification when a computer nudged them to do so. In the early days of dashboard GPS systems, drivers <a href=\"https://www.wsj.com/articles/SB120578983252543135\">famously followed the devicesâ€™ directions</a> to a fault, sending cars <a href=\"https://theweek.com/articles/464674/8-drivers-who-blindly-followed-gps-into-disaster\">into lakes, off cliffs and into trees</a>.",
+			css: ""
+		},
+		{
+			type: "text",
+			value: "Is this humility or hubris? Do we place too little value in human intelligence â€” or do we overrate it, assuming we are so smart that we can create things smarter still?",
+			css: ""
+		},
+		{
+			type: "text",
+			value: "The algorithms of Google and Bing sort the worldâ€™s knowledge for us. Facebookâ€™s newsfeed filters the updates from our social circles and decides which are important enough to show us. With self-driving features in cars, we are <a href=\"https://www.vox.com/recode/2020/2/26/21154502/tesla-autopilot-fatal-crashes\">putting our safety in the hands (and eyes)</a> of software. We place a lot of trust in these systems, but they can be as fallible as us.",
+			css: ""
+		},
+		{
+			type: "text",
+			value: "<br>",
+			css: ""
+		},
+		{
+			type: "text",
+			value: "<strong>More Articles on Artificial Intelligence:</strong>",
+			css: ""
+		},
+		{
+			type: "text",
+			value: "<a href=\"https://www.nytimes.com/2020/11/11/science/bears-facial-recognition.html\">Training Facial Recognition on Some New Furry Friends: Bears</a>",
+			css: ""
+		},
+		{
+			type: "text",
+			value: "<a href=\"https://www.nytimes.com/2020/11/21/science/coronavirus-antibodies-artificial-intelligence.html\">Antibodies Good. Machine-Made Molecules Better?</a>",
+			css: ""
+		},
+		{
+			type: "text",
+			value: "<a href=\"https://www.nytimes.com/2020/11/20/health/tuberculosis-ai-apps.html\">These Algorithms Could Bring an End to the Worldâ€™s Deadliest Killer</a>",
+			css: ""
+		}
+	];
   	var DOC = {
 		yml: yml,
 		"overwrite-config-yml": "y",
