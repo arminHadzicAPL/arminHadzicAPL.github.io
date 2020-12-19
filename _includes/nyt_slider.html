@@ -14,24 +14,22 @@
   }
 </script>
 <script id="nytg-dynamic-script_template-options">
+  function getSpritePos(value, depth){
+	let val     = value - 1,
+		square  = Math.sqrt (depth),
+		floor   = Math.floor (val / square),
+		extra   = val - floor,
+		offsetX = (floor + extra) * -300,
+		offsetY = floor * -300;
+
+	return [offsetX, offsetY];
+	};
   function testOnChange(event){
-  	console.log("am I working")
+	console.log("am I working")
 	let rangeHandle  = document.querySelector ("#range_" + slider.value.id),
-	  sliderSprite = document.querySelector ("#" + slider.value.id + " .g-slider-sprite");
+		sliderSprite = document.querySelector ("#" + slider.value.id + " .g-slider-sprite");
 
 	sliderSprite.style.backgroundImage = "url('https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/" + slider.value.background + "')";
-
-	const getSpritePos = function (value, depth)
-	{
-	  let val     = value - 1,
-	      square  = Math.sqrt (depth),
-	      floor   = Math.floor (val / square),
-	      extra   = val - floor,
-	      offsetX = (floor + extra) * -300,
-	      offsetY = floor * -300;
-
-	   return [offsetX, offsetY];
-	};
 
 	rangeHandle.oninput = function ()
 	{
@@ -45,7 +43,7 @@
 	let offset = getSpritePos (slider.value.index, slider.value.depth);
 	sliderSprite.style.backgroundPosition = offset[0] + "px " + offset[1] +"px";
 
-    return slider;
+	return slider;
 	}
 </script>
 
