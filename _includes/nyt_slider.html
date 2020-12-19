@@ -14,7 +14,6 @@
   }
 </script>
 <script id="nytg-dynamic-script_template-options">
-  
   function getSpritePos(value, depth){
 	let val     = value - 1,
 		square  = Math.sqrt (depth),
@@ -26,6 +25,14 @@
 	return [offsetX, offsetY];
 	};
   function testOnChange(event){
+  	var DOC = {
+		yml: yml,
+		"overwrite-config-yml": "y",
+		"top-asset": "",
+		"top-asset-max-width": "",
+		"use-lazy": "yes",
+		body: body
+	};
   	let filtered  = DOC.body.filter (function (item) { return item.type === "slider" }),
 	    sliders   = filtered.map (function (slider)
 	    {
