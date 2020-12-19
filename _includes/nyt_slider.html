@@ -1,23 +1,46 @@
 <!-- Jekyll Ideal Image Slider Include -->
 <!-- https://github.com/jekylltools/jekyll-ideal-image-slider-include -->
 <!-- v1.8 -->
-<!-- <link rel="preload" href="https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/build/js/main.js" as="script">
-<link rel="preload" href="https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/build/js/freebird.js" as="script"> -->
-<link id="nytg-rendered-css" href="https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/style.css" rel="stylesheet">
-<!-- <link href="https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/build/css/components.css" rel="stylesheet">
-<link data-rh="true" rel="alternate" hreflang="en-US" href="https://www.nytimes.com/interactive/2020/11/21/science/artificial-intelligence-fake-people-faces.html">
-<link data-rh="true" rel="canonical" href="https://www.nytimes.com/interactive/2020/11/21/science/artificial-intelligence-fake-people-faces.html">
-<link href="https://g1.nyt.com/fonts/css/web-fonts.5810def60210a2fa7d0848f37e3fa048bb6147b1.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="/vi-assets/static-assets/global-69acc7c8fb6a313ed7e8641e4a88bf30.css">-->
 
-<div class="g-container g-sliders-container" id="">
-<div class="g-slider-container" id="tom_age">
-	<div class="g-slider-sprite" style="background-image: url(&quot;https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/sprites/tom-age.jpg&quot;); background-position: 0px 0px;"></div>
-	<div class="g-slider-desc">
-<!-- 		<div class="g-slider-low"></div> -->
-		<div class="g-slider-title">Age</div>
-<!-- 		<div class="g-slider-high"></div> -->
+<link rel="preload" href="https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/build/js/main.js" as="script">
+<link rel="preload" href="https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/build/js/freebird.js" as="script">
+<link id="nytg-rendered-css" href="https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/style.css" rel="stylesheet">
+<link href="https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/build/css/components.css" rel="stylesheet">
+
+<!-- sprites, polyfills, imports -->
+<script>
+  if (!window.Promise || !window.fetch || !window.URL) {
+    document.write('<script src="https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/polyfills.js"><\/script>');
+  }
+</script>
+<script id="nytg-dynamic-script_template-options">
+  (function() {
+    // Check for template type: standard, minimal, or blank
+    var templateType   = "template-" + ("" || "standard");
+    // Check for icon style options
+    var templateStyle  = "template-option-" + ("" || "black-icons");
+    // Check for dark mode flag
+    var isDarkMode     = "".match(/y|yes|true/) !== null;
+    var darkMode       = (isDarkMode) ? " " + "template-mode-dark" : "";
+    // Check for feature style flag
+    var isFeatureStyle = "".toLowerCase().match(/feature|featured|feat/) !== null;
+    var featureStyle   = (isFeatureStyle) ? "template-style-feature" : "template-style-standard";
+    // Set classes on body element
+    var tBody          = document.body.classList.add(...[templateType.trim(), templateStyle.trim(),
+      darkMode.trim(), featureStyle.trim()].filter(d => !!d));
+  })();
+</script>
+
+<div class="g-story g-freebird g-max-limit " data-preview-slug="2020-11-12-fake-people">
+	<div class="g-container g-sliders-container" id="">
+		<div class="g-slider-container" id="tom_age">
+			<div class="g-slider-sprite" style="background-image: url(&quot;https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/sprites/tom-age.jpg&quot;); background-position: 0px 0px;"></div>
+			<div class="g-slider-desc">
+		<!-- 		<div class="g-slider-low"></div> -->
+				<div class="g-slider-title">Age</div>
+		<!-- 		<div class="g-slider-high"></div> -->
+			</div>
+			<input type="range" min="1" max="49" value="17" class="g-slider" id="range_tom_age">
+		</div>
 	</div>
-	<input type="range" min="1" max="49" value="17" class="g-slider" id="range_tom_age">
-</div>
 </div>
