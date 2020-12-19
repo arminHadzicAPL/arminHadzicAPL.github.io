@@ -150,16 +150,7 @@
 
 	      rangeHandle.oninput = function ()
 	      {
-	        let offset = getSpritePos (this.value, slider.value.depth);
-	        // let val     = this.value - 1,
-	        //     depth   = slider.value.depth,
-	        //     square  = Math.sqrt (depth),
-	        //     floor   = Math.floor (val / square),
-	        //     extra   = val - floor,
-	        //     offsetX = (floor + extra) * -300,
-	        //     offsetY = floor * -300;
-
-	        //sliderSprite.style.backgroundPosition = offsetX + "px " + offsetY +"px";
+	        let offset = getSpritePos (event.value, slider.value.depth);
 	        sliderSprite.style.backgroundPosition = offset[0] + "px " + offset[1] +"px";
 	      };
 
