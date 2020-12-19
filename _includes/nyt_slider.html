@@ -120,34 +120,33 @@
 		"use-lazy": "yes",
 		body: body
 	};
-	function testOnChange(){
+	//function testOnChange(){
 
-		let filtered  = DOC.body.filter (function (item) { return item.type === "slider" }),
-	    sliders   = filtered.map (function (slider)
-	    {
-	      let rangeHandle  = document.querySelector ("#range_" + slider.value.id),
-	          sliderSprite = document.querySelector ("#" + slider.value.id + " .g-slider-sprite");
+	let filtered  = DOC.body.filter (function (item) { return item.type === "slider" }),
+		sliders   = filtered.map (function (slider)
+	{
+		let rangeHandle  = document.querySelector ("#range_" + slider.value.id),
+			sliderSprite = document.querySelector ("#" + slider.value.id + " .g-slider-sprite");
 
-	      sliderSprite.style.backgroundImage = "url('https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/" + slider.value.background + "')";
+		sliderSprite.style.backgroundImage = "url('https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/" + slider.value.background + "')";
 
 
-	      rangeHandle.oninput = function ()
-	      {
-	        let offset = getSpritePos (this.value, slider.value.depth);
-	        sliderSprite.style.backgroundPosition = offset[0] + "px " + offset[1] +"px";
-	      };
+		rangeHandle.oninput = function ()
+		{
+		let offset = getSpritePos (this.value, slider.value.depth);
+		sliderSprite.style.backgroundPosition = offset[0] + "px " + offset[1] +"px";
+		};
 
-	      rangeHandle.value = parseInt (slider.value.index);
-	      let offset = getSpritePos (slider.value.index, slider.value.depth);
-	      sliderSprite.style.backgroundPosition = offset[0] + "px " + offset[1] +"px";
+		rangeHandle.value = parseInt (slider.value.index);
+		let offset = getSpritePos (slider.value.index, slider.value.depth);
+		sliderSprite.style.backgroundPosition = offset[0] + "px " + offset[1] +"px";
 
-	    return slider;
-	  });
-	}
+		return slider;
+	});
+	//}
 </script>
 
 <div class="g-story g-max-limit " data-preview-slug="2020-11-12-fake-people">
-	<script>testOnChange();</script>
 	<div class="g-container g-sliders-container" id="">
 		<div class="g-slider-container" id="tom_age">
 			<div class="g-slider-sprite" style="background-image: url(&quot;https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/sprites/tom-age.jpg&quot;); background-position: -8100px -900px;"></div>
