@@ -26,25 +26,24 @@
 	};
   function testOnChange(event){
 	console.log("am I working")
-	let rangeHandle  = document.querySelector ("#range_" + slider.value.id),
+	let rangeHandle  = document.querySelector ("#range_tom_age"), //"#range_" + slider.value.id),
 		sliderSprite = document.querySelector ("#" + slider.value.id + " .g-slider-sprite");
 
 	sliderSprite.style.backgroundImage = "url('https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/" + slider.value.background + "')";
 
-	rangeHandle.oninput = function ()
-	{
-	let offset = getSpritePos (event.value, slider.value.depth);
+	rangeHandle.oninput = function (){
+		let offset = getSpritePos (event.value, slider.value.depth);
 
-	//sliderSprite.style.backgroundPosition = offsetX + "px " + offsetY +"px";
-	sliderSprite.style.backgroundPosition = offset[0] + "px " + offset[1] +"px";
-	};
+		//sliderSprite.style.backgroundPosition = offsetX + "px " + offsetY +"px";
+		sliderSprite.style.backgroundPosition = offset[0] + "px " + offset[1] +"px";
+		};
 
-	rangeHandle.value = parseInt (slider.value.index);
-	let offset = getSpritePos (slider.value.index, slider.value.depth);
-	sliderSprite.style.backgroundPosition = offset[0] + "px " + offset[1] +"px";
+		rangeHandle.value = parseInt (slider.value.index);
+		let offset = getSpritePos (slider.value.index, slider.value.depth);
+		sliderSprite.style.backgroundPosition = offset[0] + "px " + offset[1] +"px";
 
-	return slider;
-	}
+		return slider;
+		}
 </script>
 
 <div class="g-story g-max-limit " data-preview-slug="2020-11-12-fake-people">
@@ -57,7 +56,6 @@
 		<!-- 		<div class="g-slider-high"></div> -->
 			</div>
 			<input type="range" min="1" max="49" value="17" class="g-slider" id="range_tom_age" onchange="testOnChange()">
-
 		</div>
 	</div>
 </div>
