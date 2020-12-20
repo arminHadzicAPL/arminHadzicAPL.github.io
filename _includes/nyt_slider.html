@@ -109,7 +109,6 @@
 			let rangeHandle  = document.querySelector ("#range_" + slider.value.id),
 				sliderSprite = document.querySelector ("#" + slider.value.id + " .g-slider-sprite");
 
-			console.log(site.data.renderslider.images[2])
 			sliderSprite.style.backgroundImage = "url('/" + slider.value.background + "')";
 
 
@@ -127,7 +126,9 @@
 		});
 	}
 
-	window.onload = testOnChange()
+	window.onload = function() {
+		testOnChange(); //onchange="testOnChange()"> 
+	}
 </script>
 
 <div class="g-story g-max-limit " data-preview-slug="2020-11-12-fake-people">
@@ -138,7 +139,7 @@
 			<div class="g-slider-desc">
 				<div class="g-slider-title">Age</div>
 			</div>
-			<input type="range" min="1" max="49" value="17" class="g-slider" id="range_tom_age" onchange="testOnChange()">
+			<input type="range" min="1" max="49" value="17" class="g-slider" id="range_tom_age">
 		</div>
 		<div class="g-slider-container" id="alice_eyes">
 			{% assign item = site.data.renderslider.images[1] %}
