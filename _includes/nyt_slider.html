@@ -46,7 +46,7 @@
 				title: "Age",
 				low: "",
 				high: "",
-				background: "sprites/tom-age.jpg",
+				background: "img/tom-age.jpg",
 				depth: "49",
 				index: "17"
 			},
@@ -59,7 +59,7 @@
 				title: "Eyes",
 				low: "",
 				high: "",
-				background: "sprites/alice-eyes-v2.jpg",
+				background: "img/alice-eyes-v2.jpg",
 				depth: "49",
 				index: "30"
 			},
@@ -72,7 +72,7 @@
 				title: "Perspective",
 				low: "",
 				high: "",
-				background: "sprites/shawn-yaw-v2.jpg",
+				background: "img/shawn-yaw-v2.jpg",
 				depth: "49",
 				index: "39"
 			},
@@ -85,7 +85,7 @@
 				title: "Mood",
 				low: "",
 				high: "",
-				background: "sprites/maggie-smile.jpg",
+				background: "img/maggie-smile.jpg",
 				depth: "49",
 				index: "16"
 			},
@@ -113,7 +113,7 @@
 				sliderSprite = document.querySelector ("#" + slider.value.id + " .g-slider-sprite");
 
 			console.log(slider.value.background)
-			sliderSprite.style.backgroundImage = "url('" + slider.value.background + "')"; //"url('https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/" + slider.value.background + "')";
+			sliderSprite.style.backgroundImage = "url('/" + slider.value.background + "')"; //"url('https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/" + slider.value.background + "')";
 
 
 			rangeHandle.oninput = function ()
