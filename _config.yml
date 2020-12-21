@@ -1,11 +1,4 @@
 title: Slider Demo
-theme: jekyll-theme-minimal
 
 # Build settings
 markdown: kramdown
-theme: midnight
-plugins:
-  - jekyll-feed
-exclude:
-  - Gemfile
-  - Gemfile.lock

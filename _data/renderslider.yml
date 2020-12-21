@@ -1,5 +1,9 @@
 images: 
-  - tomimg: /img/tom-age.jpg
-  - aliceimg: /img/alice-eyes-v2.jpg
-  - shawnimg: /img/shawn-yaw-v2.jpg
-  - maggieimg: /img/maggie-smile.jpg
+  - orientation0: /img/infostylegan-orientation-0.png
+  - orientation1: /img/infostylegan-orientation-1.png
+  - orientation2: /img/infostylegan-orientation-2.png
+  - orientation3: /img/infostylegan-orientation-3.png
+  - smiling0: /img/infostylegan-smiling-0.png
+  - smiling0: /img/infostylegan-smiling-1.png
+  - smiling0: /img/infostylegan-smiling-2.png
+  - smiling0: /img/infostylegan-smiling-3.png
