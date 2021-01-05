@@ -3439,7 +3439,7 @@ body {
 }
 */
 .g-container {
-  max-width: 800px;  /* was 660 */
+  max-width: 1000px;  /* was 660 */
   margin-left: auto;
   margin-right: auto;
 }
