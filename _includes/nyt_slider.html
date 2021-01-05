@@ -11,8 +11,8 @@
 			square  = Math.sqrt (depth),
 			floor   = Math.floor (val / square),
 			extra   = val - floor,
-			offsetX = (floor + extra) * -128,
-			offsetY = floor * -128;
+			offsetX = (floor + extra) * -256,
+			offsetY = floor * -256;
 
 		return [offsetX, offsetY];
 	};
@@ -30,12 +30,12 @@
 		{
 			type: "slider",
 			value: {
-				id: "orientation_0",
-				title: "Orientation",
+				id: "skintone_inter",
+				title: "Skin Tone and Facial Structure",
 				low: "",
 				high: "",
-				background: "/img/infostylegan-orientation-0.png",
-				depth: "8",
+				background: "/img/skintone_inter.png",
+				depth: "71",
 				index: "3"
 			},
 			css: ""
@@ -43,12 +43,12 @@
 		{
 			type: "slider",
 			value: {
-				id: "orientation_1",
+				id: "orientation_pure_inter",
 				title: "Orientation",
 				low: "",
 				high: "",
-				background: "/img/infostylegan-orientation-1.png",
-				depth: "8",
+				background: "/img/orientation_pure_inter.png",
+				depth: "71",
 				index: "8"
 			},
 			css: ""
@@ -56,12 +56,12 @@
 		{
 			type: "slider",
 			value: {
-				id: "orientation_2",
-				title: "Orientation",
+				id: "orientation_mixed_inter",
+				title: "Orientation and Gender",
 				low: "",
 				high: "",
-				background: "/img/infostylegan-orientation-2.png",
-				depth: "8",
+				background: "/img/orientation_mixed_inter.png",
+				depth: "71",
 				index: "4"
 			},
 			css: ""
@@ -69,12 +69,12 @@
 		{
 			type: "slider",
 			value: {
-				id: "orientation_3",
-				title: "Orientation",
+				id: "smiling_mixed_inter",
+				title: "Expression (smile) and Hairstyle",
 				low: "",
 				high: "",
-				background: "/img/infostylegan-orientation-3.png",
-				depth: "8",
+				background: "/img/smiling_mixed_inter.png",
+				depth: "71",
 				index: "1"
 			},
 			css: ""
@@ -82,12 +82,12 @@
 		{
 			type: "slider",
 			value: {
-				id: "smiling_0",
-				title: "Smiling",
+				id: "orientation_artifact_inter",
+				title: "Orientation (with artifacts)",
 				low: "",
 				high: "",
-				background: "/img/infostylegan-smiling-0.png",
-				depth: "8",
+				background: "/img/orientation_artifact_inter.png",
+				depth: "71",
 				index: "3"
 			},
 			css: ""
@@ -100,7 +100,7 @@
 				low: "",
 				high: "",
 				background: "/img/infostylegan-smiling-1.png",
-				depth: "8",
+				depth: "71",
 				index: "8"
 			},
 			css: ""
@@ -113,7 +113,7 @@
 				low: "",
 				high: "",
 				background: "/img/infostylegan-smiling-2.png",
-				depth: "8",
+				depth: "71",
 				index: "4"
 			},
 			css: ""
@@ -126,7 +126,7 @@
 				low: "",
 				high: "",
 				background: "/img/infostylegan-smiling-3.png",
-				depth: "8",
+				depth: "71",
 				index: "1"
 			},
 			css: ""
@@ -175,71 +175,78 @@
 </script>
 
 <div class="g-story g-max-limit " data-preview-slug="2020-11-12-fake-people">
+	{% assign item = site.data.renderslider.images[5] %}
+	<div class="SingleImg" style="background-image: url('{{ item.gender_pure }}');"></div>
+	<div class="g-slider-desc">
+		<div class="g-slider-title">Binary Latent Variable: Gender</div>
+	</div>
+
 	<div class="g-container g-sliders-container" id="">
-		<div class="g-slider-container" id="orientation_0">
+		<div class="g-slider-container" id="skintone_inter">
 			{% assign item = site.data.renderslider.images[0] %}
-			<div class="g-slider-sprite" style="background-image: url('{{ item.orientation0 }}'); background-position: -384px -128px;"></div>
+			<div class="g-slider-sprite" style="background-image: url('{{ item.skintone_inter }}'); background-position: -768px -256px;"></div>
 			<div class="g-slider-desc">
-				<div class="g-slider-title">Orientation</div>
+				<div class="g-slider-title">Skin Tone and Facial Structure</div>
 			</div>
-			<input type="range" min="1" max="8" value="3" class="g-slider" id="range_orientation_0">
+			<input type="range" min="1" max="71" value="3" class="g-slider" id="range_skintone_inter">
 		</div>
-		<div class="g-slider-container" id="orientation_1">
+		<div class="g-slider-container" id="orientation_pure_inter">
 			{% assign item = site.data.renderslider.images[1] %}
-			<div class="g-slider-sprite" style="background-image: url('{{ item.orientation1 }}'); background-position: -1024px -128px;"></div>
+			<div class="g-slider-sprite" style="background-image: url('{{ item.orientation_pure_inter }}'); background-position: -2048px -256px;"></div>
 			<div class="g-slider-desc">
 				<div class="g-slider-title">Orientation</div>
 			</div>
-			<input type="range" min="1" max="8" value="8" class="g-slider" id="range_orientation_1">
+			<input type="range" min="1" max="71" value="8" class="g-slider" id="range_orientation_pure_inter">
 		</div>
-		<div class="g-slider-container" id="orientation_2">
+		<div class="g-slider-container" id="orientation_mixed_inter">
 			{% assign item = site.data.renderslider.images[2] %}
-			<div class="g-slider-sprite" style="background-image: url('{{ item.orientation2 }}'); background-position: -512px -128px;"></div>
+			<div class="g-slider-sprite" style="background-image: url('{{ item.orientation_mixed_inter }}'); background-position: -1024px -256px;"></div>
 			<div class="g-slider-desc">
-				<div class="g-slider-title">Orientation</div>
+				<div class="g-slider-title">Orientation and Gender</div>
 			</div>
-			<input type="range" min="1" max="8" value="4" class="g-slider" id="range_orientation_2">
+			<input type="range" min="1" max="71" value="4" class="g-slider" id="range_orientation_mixed_inter">
 		</div>
-		<div class="g-slider-container" id="orientation_3">
+		<div class="g-slider-container" id="smiling_mixed_inter">
 			{% assign item = site.data.renderslider.images[3] %}
-			<div class="g-slider-sprite" style="background-image: url('{{ item.orientation3 }}'); background-position: -128px -128px;"></div>
+			<div class="g-slider-sprite" style="background-image: url('{{ item.smiling_mixed_inter }}'); background-position: -256px -256px;"></div>
 			<div class="g-slider-desc">
-				<div class="g-slider-title">Orientation</div>
+				<div class="g-slider-title">Expression (smiling) and Hairstyle</div>
 			</div>
-			<input type="range" min="1" max="8" value="1" class="g-slider" id="range_orientation_3">
+			<input type="range" min="1" max="71" value="1" class="g-slider" id="range_smiling_mixed_inter">
+		</div>
+		<div class="g-slider-container" id="orientation_artifact_inter">
+			{% assign item = site.data.renderslider.images[4] %}
+			<div class="g-slider-sprite" style="background-image: url('{{ item.orientation_artifact_inter }}'); background-position: -768px -256px;"></div>
+			<div class="g-slider-desc">
+				<div class="g-slider-title">Orientation (with artifacts)</div>
+			</div>
+			<input type="range" min="1" max="71" value="3" class="g-slider" id="range_orientation_artifact_inter">
 		</div>
 
-		<div class="g-slider-container" id="smiling_0">
-			{% assign item = site.data.renderslider.images[0] %}
-			<div class="g-slider-sprite" style="background-image: url('{{ item.smiling0 }}'); background-position: -384px -128px;"></div>
-			<div class="g-slider-desc">
-				<div class="g-slider-title">Smiling</div>
-			</div>
-			<input type="range" min="1" max="8" value="3" class="g-slider" id="range_smiling_0">
-		</div>
+
 		<div class="g-slider-container" id="smiling_1">
 			{% assign item = site.data.renderslider.images[1] %}
-			<div class="g-slider-sprite" style="background-image: url('{{ item.smiling1 }}'); background-position: -1024px -128px;"></div>
+			<div class="g-slider-sprite" style="background-image: url('{{ item.smiling1 }}'); background-position: -2048px -256px;"></div>
 			<div class="g-slider-desc">
 				<div class="g-slider-title">Smiling</div>
 			</div>
-			<input type="range" min="1" max="8" value="8" class="g-slider" id="range_smiling_1">
+			<input type="range" min="1" max="71" value="8" class="g-slider" id="range_smiling_1">
 		</div>
 		<div class="g-slider-container" id="smiling_2">
 			{% assign item = site.data.renderslider.images[2] %}
-			<div class="g-slider-sprite" style="background-image: url('{{ item.smiling2 }}'); background-position: -512px -128px;"></div>
+			<div class="g-slider-sprite" style="background-image: url('{{ item.smiling2 }}'); background-position: -1024px -256px;"></div>
 			<div class="g-slider-desc">
 				<div class="g-slider-title">Smiling</div>
 			</div>
-			<input type="range" min="1" max="8" value="4" class="g-slider" id="range_smiling_2">
+			<input type="range" min="1" max="71" value="4" class="g-slider" id="range_smiling_2">
 		</div>
 		<div class="g-slider-container" id="smiling_3">
 			{% assign item = site.data.renderslider.images[3] %}
-			<div class="g-slider-sprite" style="background-image: url('{{ item.smiling3 }}'); background-position: -128px -128px;"></div>
+			<div class="g-slider-sprite" style="background-image: url('{{ item.smiling3 }}'); background-position: -256px -256px;"></div>
 			<div class="g-slider-desc">
 				<div class="g-slider-title">Smiling</div>
 			</div>
-			<input type="range" min="1" max="8" value="1" class="g-slider" id="range_smiling_3">
+			<input type="range" min="1" max="71" value="1" class="g-slider" id="range_smiling_3">
 		</div>
 	</div>
 </div>
