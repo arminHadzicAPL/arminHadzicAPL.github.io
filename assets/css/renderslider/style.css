@@ -3460,15 +3460,10 @@ body {
   height: 256px;
 }
 
-.g-slider-sprite2 {
-  width: 512px;
-  height: 256px;
-}
-
 .g-slider-desc {
   width: 260px;
-  height: 26px;
-  padding-top: 24px;
+  height: 36px;
+  padding-top: 14px;
   margin: 0 auto 4px auto;
 }
 
