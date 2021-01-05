@@ -3462,8 +3462,9 @@ body {
 
 .g-slider-desc {
   width: 260px;
-  height: 36px;
+  height: 26px;
   padding-top: 14px;
+  padding-top: 10px;
   margin: 0 auto 4px auto;
 }
 
