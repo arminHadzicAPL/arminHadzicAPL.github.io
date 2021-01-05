@@ -1,7 +1,7 @@
 images: 
-  - skintone_inter: /img/skintone_inter.png
+  - skintone: /img/skintone_pure.png
   - gender_pure: /img/gender_pure.png
-  - orientation_pure_inter: /img/orientation_pure_inter.png
-  - orientation_mixed_inter: /img/orientation_mixed_inter.png
-  - smiling_mixed_inter: /img/smiling_mixed_inter.png
-  - orientation_artifact_inter: /img/orientation_artifact_inter.png
+  - orientation_pure: /img/orientation_pure.png
+  - orientation_mixed: /img/orientation_mixed.png
+  - smiling_mixed: /img/smiling_mixed.png
+  - orientation_artifact: /img/orientation_artifact.png
