@@ -43,6 +43,19 @@
 		{
 			type: "slider",
 			value: {
+				id: "orientation_artifact_inter",
+				title: "Binary Latent Variable: Gender",
+				low: "",
+				high: "",
+				background: "/img/gender_pure.png",
+				depth: "2",
+				index: "1"
+			},
+			css: ""
+		},
+		{
+			type: "slider",
+			value: {
 				id: "orientation_pure_inter",
 				title: "Orientation",
 				low: "",
@@ -89,45 +102,6 @@
 				background: "/img/orientation_artifact_inter.png",
 				depth: "71",
 				index: "3"
-			},
-			css: ""
-		},
-		{
-			type: "slider",
-			value: {
-				id: "smiling_1",
-				title: "Smiling",
-				low: "",
-				high: "",
-				background: "/img/infostylegan-smiling-1.png",
-				depth: "71",
-				index: "8"
-			},
-			css: ""
-		},
-		{
-			type: "slider",
-			value: {
-				id: "smiling_2",
-				title: "Smiling",
-				low: "",
-				high: "",
-				background: "/img/infostylegan-smiling-2.png",
-				depth: "71",
-				index: "4"
-			},
-			css: ""
-		},
-		{
-			type: "slider",
-			value: {
-				id: "smiling_3",
-				title: "Smiling",
-				low: "",
-				high: "",
-				background: "/img/infostylegan-smiling-3.png",
-				depth: "71",
-				index: "1"
 			},
 			css: ""
 		},
@@ -184,10 +158,12 @@
 			</div>
 			<input type="range" min="1" max="71" value="3" class="g-slider" id="range_skintone_inter">
 		</div>
-		{% assign item = site.data.renderslider.images[1] %}
-		<div class="g-slider-sprite2" style="background-image: url('{{ item.gender_pure }}'); background-position: -512px -256px;"></div>
-		<div class="g-slider-desc">
-			<div class="g-slider-title">Binary Latent Variable: Gender</div>
+		<div class="g-slider-container" id="gender_pure">
+			{% assign item = site.data.renderslider.images[1] %}
+			<div class="g-slider-sprite2" style="background-image: url('{{ item.gender_pure }}'); background-position: -512px -256px;"></div>
+			<div class="g-slider-desc">
+				<div class="g-slider-title">Binary Latent Variable: Gender</div>
+			</div>
 		</div>
 		<div class="g-slider-container" id="orientation_pure_inter">
 			{% assign item = site.data.renderslider.images[2] %}
