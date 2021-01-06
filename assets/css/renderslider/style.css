@@ -3461,7 +3461,7 @@ body {
 }
 
 .g-slider-desc {
-  width: 260px;
+  width: 294px;
   height: 28px;
   padding-top: 14px;
   padding-bottom: 28px;
@@ -3502,7 +3502,7 @@ body {
 
 .g-slider {
   -webkit-appearance: none;
-  width: 280px;
+  width: 294px;
   height: 2px;
   background: #ccc;
   outline: none;

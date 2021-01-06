@@ -191,11 +191,11 @@
 	<div class="g-container g-sliders-container" id="">
 		<div class="g-slider-container" id="skintone">
 			{% assign item = site.data.renderslider.images[0] %}
-			<div class="g-slider-sprite" style="background-image: url('{{ item.skintone }}'); background-position: -768px -256px;"></div>
+			<div class="g-slider-sprite" style="background-image: url('{{ item.skintone }}'); background-position: -256px -256px;"></div>
 			<div class="g-slider-desc">
 				<div class="g-slider-title">Skin Tone and Facial Structure</div>
 			</div>
-			<input type="range" min="1" max="8" value="3" class="g-slider" id="range_skintone">
+			<input type="range" min="1" max="8" value="1" class="g-slider" id="range_skintone">
 		</div>
 		<div class="g-slider-container" id="gender_pure">
 			{% assign item = site.data.renderslider.images[1] %}
@@ -207,19 +207,19 @@
 		</div>
 		<div class="g-slider-container" id="orientation_pure">
 			{% assign item = site.data.renderslider.images[2] %}
-			<div class="g-slider-sprite" style="background-image: url('{{ item.orientation_pure }}'); background-position: -2048px -256px;"></div>
+			<div class="g-slider-sprite" style="background-image: url('{{ item.orientation_pure }}'); background-position: -256px -256px;"></div>
 			<div class="g-slider-desc">
 				<div class="g-slider-title">Orientation</div>
 			</div>
-			<input type="range" min="1" max="8" value="8" class="g-slider" id="range_orientation_pure">
+			<input type="range" min="1" max="8" value="1" class="g-slider" id="range_orientation_pure">
 		</div>
 		<div class="g-slider-container" id="orientation_mixed">
 			{% assign item = site.data.renderslider.images[3] %}
-			<div class="g-slider-sprite" style="background-image: url('{{ item.orientation_mixed }}'); background-position: -1024px -256px;"></div>
+			<div class="g-slider-sprite" style="background-image: url('{{ item.orientation_mixed }}'); background-position: -256px -256px;"></div>
 			<div class="g-slider-desc">
 				<div class="g-slider-title">Orientation and Gender</div>
 			</div>
-			<input type="range" min="1" max="8" value="4" class="g-slider" id="range_orientation_mixed">
+			<input type="range" min="1" max="8" value="1" class="g-slider" id="range_orientation_mixed">
 		</div>
 		<div class="g-slider-container" id="smiling_mixed">
 			{% assign item = site.data.renderslider.images[4] %}
@@ -231,38 +231,38 @@
 		</div>
 		<div class="g-slider-container" id="orientation_artifact">
 			{% assign item = site.data.renderslider.images[5] %}
-			<div class="g-slider-sprite" style="background-image: url('{{ item.orientation_artifact }}'); background-position: -768px -256px;"></div>
+			<div class="g-slider-sprite" style="background-image: url('{{ item.orientation_artifact }}'); background-position: -256px -256px;"></div>
 			<div class="g-slider-desc">
 				<div class="g-slider-title">Orientation (with artifacts)</div>
 			</div>
-			<input type="range" min="1" max="8" value="3" class="g-slider" id="range_orientation_artifact">
+			<input type="range" min="1" max="8" value="1" class="g-slider" id="range_orientation_artifact">
 		</div>
 
 		<div class="g-slider-container" id="dr_seq">
 			{% assign item = site.data.renderslider.images[6] %}
-			<div class="g-slider-sprite" style="background-image: url('{{ item.dr_seq }}'); background-position: -768px -256px;"></div>
+			<div class="g-slider-sprite" style="background-image: url('{{ item.dr_seq }}'); background-position: -256px -256px;"></div>
 			<div class="g-slider-desc">
 				<div class="g-slider-title">Diabetic Retinopathy</div>
 			</div>
-			<input type="range" min="1" max="100" value="3" class="g-slider" id="range_dr_seq">
+			<input type="range" min="1" max="100" value="1" class="g-slider" id="range_dr_seq">
 		</div>
 
 		<div class="g-slider-container" id="dr_seq_2">
 			{% assign item = site.data.renderslider.images[7] %}
-			<div class="g-slider-sprite" style="background-image: url('{{ item.dr_seq_2 }}'); background-position: -12800px -256px;"></div>
+			<div class="g-slider-sprite" style="background-image: url('{{ item.dr_seq_2 }}'); background-position: -256px -256px;"></div>
 			<div class="g-slider-desc">
 				<div class="g-slider-title">Diabetic Retinopathy</div>
 			</div>
-			<input type="range" min="1" max="100" value="50" class="g-slider" id="range_dr_seq_2">
+			<input type="range" min="1" max="100" value="1" class="g-slider" id="range_dr_seq_2">
 		</div>
-
+		TODO: center the slider with the imgs and have all sliders start on the left
 		<div class="g-slider-container" id="aa_seq">
 			{% assign item = site.data.renderslider.images[8] %}
-			<div class="g-slider-sprite" style="background-image: url('{{ item.aa_seq }}'); background-position: -6400px -256px;"></div>
+			<div class="g-slider-sprite" style="background-image: url('{{ item.aa_seq }}'); background-position: -256px -256px;"></div>
 			<div class="g-slider-desc">
 				<div class="g-slider-title">Pigmentation</div>
 			</div>
-			<input type="range" min="1" max="100" value="25" class="g-slider" id="range_aa_seq">
+			<input type="range" min="1" max="100" value="1" class="g-slider" id="range_aa_seq">
 		</div>
 	</div>
 </div>
