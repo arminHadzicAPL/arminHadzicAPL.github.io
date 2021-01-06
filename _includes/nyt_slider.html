@@ -106,6 +106,45 @@
 			css: ""
 		},
 		{
+			type: "slider",
+			value: {
+				id: "dr_seq",
+				title: "Diabetic Retinopathy",
+				low: "",
+				high: "",
+				background: "/img/dr_seq.png",
+				depth: "100",
+				index: "3"
+			},
+			css: ""
+		},
+		{
+			type: "slider",
+			value: {
+				id: "dr_seq2",
+				title: "Diabetic Retinopathy",
+				low: "",
+				high: "",
+				background: "/img/dr_seq2.png",
+				depth: "100",
+				index: "50"
+			},
+			css: ""
+		},
+		{
+			type: "slider",
+			value: {
+				id: "aa_seq",
+				title: "Ethnicity",
+				low: "",
+				high: "",
+				background: "/img/dr_seq.png",
+				depth: "100",
+				index: "25"
+			},
+			css: ""
+		},
+		{
 			type: "end",
 			value: "g-sliders-container",
 			css: ""
@@ -197,6 +236,33 @@
 				<div class="g-slider-title">Orientation (with artifacts)</div>
 			</div>
 			<input type="range" min="1" max="8" value="3" class="g-slider" id="range_orientation_artifact">
+		</div>
+
+		<div class="g-slider-container" id="dr_seq">
+			{% assign item = site.data.renderslider.images[6] %}
+			<div class="g-slider-sprite" style="background-image: url('{{ item.dr_seq }}'); background-position: -768px -256px;"></div>
+			<div class="g-slider-desc">
+				<div class="g-slider-title">Diabetic Retinopathy</div>
+			</div>
+			<input type="range" min="1" max="100" value="3" class="g-slider" id="range_dr_seq">
+		</div>
+
+		<div class="g-slider-container" id="dr_seq2">
+			{% assign item = site.data.renderslider.images[7] %}
+			<div class="g-slider-sprite" style="background-image: url('{{ item.dr_seq2 }}'); background-position: -12800px -256px;"></div>
+			<div class="g-slider-desc">
+				<div class="g-slider-title">Diabetic Retinopathy</div>
+			</div>
+			<input type="range" min="1" max="100" value="50" class="g-slider" id="range_dr_seq2">
+		</div>
+
+		<div class="g-slider-container" id="aa_seq">
+			{% assign item = site.data.renderslider.images[8] %}
+			<div class="g-slider-sprite" style="background-image: url('{{ item.aa_seq }}'); background-position: -6400px -256px;"></div>
+			<div class="g-slider-desc">
+				<div class="g-slider-title">Ethnicity</div>
+			</div>
+			<input type="range" min="1" max="100" value="25" class="g-slider" id="range_aa_seq">
 		</div>
 	</div>
 </div>
